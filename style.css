@@ -1,0 +1,67 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-areas: "title title title" "html-section css-section javascript-section" "result result result";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 60px auto 200px;
+  width: 100vw;
+}
+main h2 {
+  background-color: #333;
+  color: #aaa;
+  font-family: verdana;
+  font-size: 19px;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px 10px 5px 33px;
+  text-transform: uppercase;
+}
+
+section {
+  height: auto;
+  width: auto;
+}
+
+#title {
+  background-color: #222;
+  color: #999;
+  font-family: verdana;
+  font-size: 45px;
+  font-weight: 400;
+  margin: 0;
+  padding: auto;
+  text-transform: uppercase;
+  grid-area: title;
+  text-align: center;
+}
+
+#result {
+  border: 1px inset #ccc;
+  border-top: 10px solid #ccc;
+  font-family: "PT Sans Narrow", sans-serif;
+  grid-area: result;
+  height: 100%;
+  margin: 5px;
+  width: calc(100% - 10px);
+}
+
+#html-section {
+  grid-area: html-section;
+}
+
+#css-section {
+  grid-area: css-section;
+}
+
+#javascript-section {
+  grid-area: javascript-section;
+}
+
+.CodeMirror {
+  min-height: 100%;
+}
